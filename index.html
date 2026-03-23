@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J Reyes Complete Auto | Kyle, TX</title>
+  <meta name="description" content="Complete auto repair in Kyle, TX. State inspections, oil changes, brakes, A/C, alignments & more. All makes & models. Call (512) 256-5169." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:         #080a0c;
+      --dark:          #0e1014;
+      --panel:         #181c22;
+      --panel-light:   #1e232c;
+      --border:        #2e3340;
+      --border-bright: #424858;
+      --mid:           #555e72;
+      --silver:        #a8b0c4;
+      --silver-bright: #ccd2e4;
+      --light:         #dde2ee;
+      --white:         #f0f3fa;
+      --red:           #c0392b;
+      --red-bright:    #e04030;
+      --red-dim:       #7a2018;
+      --metallic-1:    #c0c6d4;
+      --metallic-2:    #8890a8;
+      --metallic-3:    #606878;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--black);
+      color: var(--light);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .bg-fixed {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('assets/jreyes-background.jpg');
+      background-size: cover;
+      background-position: center center;
+      z-index: -1;
+      will-change: transform;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem;
+      height: 90px;
+      background: rgba(8,10,12,0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-bright);
+    }
+
+    .nav-logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-logo-img {
+      height: 60px;
+      width: auto;
+    }
+
+    .nav-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.12em;
+      line-height: 1.1;
+    }
+
+    .nav-logo-text .top { color: var(--white); }
+    .nav-logo-text .bottom { color: var(--red-bright); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--silver-bright);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--red-bright); }
+
+    .nav-cta {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--red);
+      padding: 0.55rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--red-bright); }
+
+    .nav-cta.outline {
+      background: var(--panel);
+      color: var(--red-bright);
+      border: 1px solid var(--red);
+    }
+
+    .nav-cta.outline:hover { background: rgba(192,57,43,0.15); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10rem 5rem 6rem 5rem;
+      position: relative;
+      z-index: 2;
+      background: linear-gradient(135deg, rgba(8,10,14,0.82) 0%, rgba(18,20,28,0.78) 100%);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--red-bright);
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-title .accent { color: var(--red-bright); }
+    .title-line { display: block; line-height: 0.95; }
+
+    .hero-subtitle {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(1rem, 1.6vw, 1.3rem);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--silver-bright);
+      margin-bottom: 2.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--silver);
+      max-width: 440px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--red);
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--red-bright); transform: translateY(-2px); }
+
+    .btn-outline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--silver-bright);
+      border: 1px solid var(--border-bright);
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { border-color: var(--red-bright); color: var(--red-bright); }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, rgba(18,20,28,0.78) 0%, rgba(10,12,16,0.78) 100%);
+    }
+
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, #080a0c 0%, transparent 45%);
+      z-index: 1;
+    }
+
+    .hero-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(15%) contrast(1.05);
+      opacity: 0.65;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 3rem;
+      left: 5rem;
+      background: var(--panel-light);
+      border: 1px solid var(--border-bright);
+      padding: 1.2rem 1.8rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      z-index: 3;
+      animation: fadeUp 0.8s 0.5s both;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+      text-decoration: none;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge-icon { font-size: 1.8rem; }
+
+    .badge-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+
+    .badge-text strong { display: block; font-size: 1rem; color: var(--white); font-weight: 600; }
+    .hero-badge:hover { border-color: var(--red-bright); transition: border-color 0.2s; }
+
+    /* METALLIC DIVIDER */
+    .metallic-strip {
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--red-dim) 20%, var(--red) 50%, var(--red-dim) 80%, transparent 100%);
+    }
+
+    /* SERVICES STRIP */
+    .brands-strip {
+      background: var(--panel-light);
+      border-bottom: 1px solid var(--border-bright);
+      padding: 1.8rem 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .brands-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--metallic-3);
+      white-space: nowrap;
+    }
+
+    .brand-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--silver-bright);
+      transition: color 0.2s;
+    }
+
+    .brand-name:hover { color: var(--red-bright); }
+
+    /* SECTION COMMONS */
+    section { padding: 7rem 5rem; }
+
+    .section-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--red-bright); }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      letter-spacing: 0.03em;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ABOUT */
+    #about {
+      background: linear-gradient(160deg, rgba(18,20,28,0.80) 0%, rgba(12,14,20,0.80) 100%);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      border-bottom: 1px solid var(--border-bright);
+    }
+
+    .about-body p {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--silver);
+      margin-bottom: 1.2rem;
+    }
+
+    .about-body p strong { color: var(--silver-bright); font-weight: 500; }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border-bright);
+      border: 1px solid var(--border-bright);
+      margin-top: 2.5rem;
+    }
+
+    .stat {
+      background: var(--panel-light);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--red-dim), var(--red), var(--red-dim));
+    }
+
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      background: linear-gradient(135deg, var(--red-bright) 0%, #e85040 50%, var(--red) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .stat-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-top: 0.4rem;
+    }
+
+    .about-image-wrap { position: relative; }
+
+    .about-image-wrap img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(15%);
+    }
+
+    .about-image-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      width: 60%;
+      height: 60%;
+      border: 1px solid var(--border-bright);
+      z-index: -1;
+    }
+
+    /* SERVICES */
+    #services { background: rgba(8,10,14,0.80); }
+
+    .services-header { max-width: 600px; margin-bottom: 4rem; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border-bright);
+      border: 1px solid var(--border-bright);
+    }
+
+    .service-card {
+      background: var(--panel);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: linear-gradient(180deg, var(--metallic-1), var(--red));
+      transition: height 0.3s;
+    }
+
+    .service-card:hover { background: var(--panel-light); }
+    .service-card:hover::before { height: 100%; }
+
+    .service-icon { font-size: 1.8rem; margin-bottom: 1.2rem; display: block; }
+
+    .service-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--silver-bright);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-desc { font-size: 0.9rem; line-height: 1.7; color: var(--silver); }
+
+    /* WHY US */
+    #why {
+      background: linear-gradient(160deg, rgba(20,22,30,0.80) 0%, rgba(14,16,22,0.80) 100%);
+      border-top: 1px solid var(--border-bright);
+      border-bottom: 1px solid var(--border-bright);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .why-item {
+      border-top: 2px solid var(--border-bright);
+      padding-top: 1.5rem;
+      transition: border-color 0.3s;
+    }
+
+    .why-item:hover { border-top-color: var(--red); }
+
+    .why-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, var(--border-bright) 0%, var(--metallic-3) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .why-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--silver-bright);
+      margin-bottom: 0.7rem;
+    }
+
+    .why-desc { font-size: 0.9rem; line-height: 1.7; color: var(--silver); }
+
+    /* REVIEWS */
+    #reviews {
+      background: rgba(8,10,14,0.80);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #reviews::before {
+      content: '"';
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20rem;
+      color: var(--panel);
+      line-height: 1;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .reviews-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .review-stars { font-size: 1.5rem; color: var(--red-bright); letter-spacing: 4px; margin-bottom: 2rem; }
+
+    .review-quote {
+      font-family: 'Barlow', sans-serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--light);
+      margin-bottom: 2rem;
+    }
+
+    .review-author {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+    }
+
+    .review-meta {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--silver);
+      margin-top: 0.3rem;
+    }
+
+    .reviews-count { margin-top: 3rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; }
+
+    .rc-line { flex: 1; max-width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--border-bright)); }
+    .rc-line:last-child { background: linear-gradient(90deg, var(--border-bright), transparent); }
+
+    .rc-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+
+    /* GALLERY */
+    #gallery {
+      background: linear-gradient(160deg, rgba(16,18,26,0.80) 0%, rgba(8,10,14,0.80) 100%);
+      padding: 5rem;
+      border-top: 1px solid var(--border-bright);
+    }
+
+    .gallery-note {
+      margin-top: 2.5rem;
+      border: 1px dashed var(--border-bright);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .gallery-note p {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    /* CONTACT */
+    #contact {
+      background: linear-gradient(160deg, rgba(18,20,28,0.80) 0%, rgba(12,14,20,0.80) 100%);
+      border-top: 1px solid var(--border-bright);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+
+    .contact-left { padding: 7rem 5rem; border-right: 1px solid var(--border-bright); }
+    .contact-right { padding: 7rem 5rem; }
+
+    .contact-item { margin-bottom: 2.5rem; }
+
+    .contact-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-value { font-size: 1.05rem; color: var(--light); }
+    .contact-value a { color: var(--light); text-decoration: none; transition: color 0.2s; }
+    .contact-value a:hover { color: var(--red-bright); }
+
+    .hours-grid { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.5rem; }
+
+    .hours-day {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--silver-bright);
+    }
+
+    .hours-time { font-size: 0.9rem; color: var(--light); }
+    .hours-time.closed { color: var(--mid); }
+
+    .cta-block {
+      background: var(--panel);
+      border: 1px solid var(--border-bright);
+      padding: 3rem;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--metallic-1), var(--red), var(--metallic-1), transparent);
+    }
+
+    .cta-block-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-block-desc { font-size: 0.9rem; line-height: 1.7; color: var(--silver); margin-bottom: 2rem; }
+
+    .map-container {
+      width: 100%;
+      height: 300px;
+      background: var(--dark);
+      border: 1px solid var(--border-bright);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .map-container iframe { width: 100%; height: 100%; border: 0; filter: grayscale(80%) invert(90%) contrast(0.75); }
+
+    /* FOOTER */
+    footer { background: #050608; border-top: 1px solid var(--border-bright); padding: 0; }
+
+    .footer-metallic {
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--red-dim) 20%, var(--red) 50%, var(--red-dim) 80%, transparent 100%);
+    }
+
+    .footer-inner {
+      padding: 2.5rem 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.15em;
+      background: linear-gradient(135deg, var(--silver) 0%, var(--metallic-1) 50%, var(--silver) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-brand span {
+      background: linear-gradient(135deg, var(--red-bright) 0%, #e85040 50%, var(--red) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-copy {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--metallic-3);
+    }
+
+    /* QUOTE FORM */
+    .quote-form { width: 100%; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+    .form-group { display: flex; flex-direction: column; }
+
+    .form-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 0.6rem;
+    }
+
+    .form-input {
+      background: var(--panel);
+      border: 1px solid var(--border-bright);
+      color: var(--light);
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      padding: 0.85rem 1.1rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-input::placeholder { color: var(--mid); }
+
+    .form-input:focus {
+      border-color: var(--red);
+      background: var(--panel-light);
+    }
+
+    .form-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23606878' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    .form-select option { background: var(--panel); color: var(--light); }
+
+    .form-textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
+
+    @media (max-width: 700px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-row-3 { grid-template-columns: 1fr; }
+    }
+
+    /* WALK-IN BADGE */
+    .walkin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(192,57,43,0.15);
+      border: 1px solid var(--red);
+      padding: 0.5rem 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .walkin-badge span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+    }
+
+    /* ANIMATIONS */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 0 2rem; height: 76px; }
+      .nav-links { display: none; }
+      section { padding: 5rem 2rem; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 8rem 2rem 4rem; }
+      .hero-right { height: 50vw; min-height: 280px; }
+      .hero-badge { left: 2rem; bottom: 2rem; }
+      #about { grid-template-columns: 1fr; gap: 3rem; }
+      .about-image-wrap img { height: 300px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      #contact { grid-template-columns: 1fr; }
+      .contact-left { padding: 4rem 2rem; border-right: none; border-bottom: 1px solid var(--border-bright); }
+      .contact-right { padding: 4rem 2rem; }
+      .footer-inner { flex-direction: column; text-align: center; padding: 2.5rem 2rem; }
+      .brands-strip { gap: 2rem; padding: 1.5rem 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-fixed"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img src="assets/jreyes-logo.png" alt="J Reyes Complete Auto" class="nav-logo-img" onerror="this.style.display='none'" />
+      <div class="nav-logo-text">
+        <div class="top">J REYES</div>
+        <div class="bottom">COMPLETE AUTO</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;gap:0.8rem;align-items:center;">
+      <a href="#quote" class="nav-cta outline">Request Service</a>
+      <a href="tel:5122565169" class="nav-cta">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Kyle, Texas · All Makes &amp; Models</div>
+      <h1 class="hero-title">
+        <span class="title-line">Complete</span>
+        <span class="title-line accent">Auto</span>
+        <span class="title-line">Repair</span>
+      </h1>
+      <p class="hero-subtitle">Honest Work · Fair Prices · Walk-Ins Welcome</p>
+      <p class="hero-desc">
+        For over 10 years, J Reyes Complete Auto has kept Kyle drivers safely on the road. From quick oil changes and state inspections to major engine work — quality service you can count on, every time.
+      </p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn-primary">Request Service</a>
+        <a href="tel:5122565169" class="btn-outline">Call (512) 256-5169</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img class="hero-bg" src="assets/jreyes-hero.jpg" alt="J Reyes Complete Auto shop" onerror="this.style.display='none'" />
+      <svg style="position:absolute;bottom:0;right:0;width:70%;opacity:0.05;pointer-events:none;" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="200" r="160" stroke="#c0c6d4" stroke-width="2"/>
+        <circle cx="200" cy="200" r="120" stroke="#c0c6d4" stroke-width="1"/>
+        <circle cx="200" cy="200" r="50" stroke="#c0c6d4" stroke-width="3"/>
+        <line x1="200" y1="40" x2="200" y2="80" stroke="#c0c6d4" stroke-width="8"/>
+        <line x1="200" y1="320" x2="200" y2="360" stroke="#c0c6d4" stroke-width="8"/>
+        <line x1="40" y1="200" x2="80" y2="200" stroke="#c0c6d4" stroke-width="8"/>
+        <line x1="320" y1="200" x2="360" y2="200" stroke="#c0c6d4" stroke-width="8"/>
+        <line x1="86" y1="86" x2="114" y2="114" stroke="#c0c6d4" stroke-width="6"/>
+        <line x1="286" y1="286" x2="314" y2="314" stroke="#c0c6d4" stroke-width="6"/>
+        <line x1="314" y1="86" x2="286" y2="114" stroke="#c0c6d4" stroke-width="6"/>
+        <line x1="114" y1="286" x2="86" y2="314" stroke="#c0c6d4" stroke-width="6"/>
+      </svg>
+    </div>
+
+    <a href="#reviews" class="hero-badge">
+      <div class="badge-icon">✅</div>
+      <div class="badge-text">
+        <strong>Walk-Ins Welcome</strong>
+        No appointment needed
+      </div>
+    </a>
+  </section>
+
+  <div class="metallic-strip"></div>
+
+  <!-- SERVICES STRIP -->
+  <div class="brands-strip">
+    <span class="brands-label">Quick Services</span>
+    <span class="brand-name">State Inspections</span>
+    <span class="brand-name">Oil Changes</span>
+    <span class="brand-name">Brakes</span>
+    <span class="brand-name">A/C Repair</span>
+    <span class="brand-name">Tire Repair</span>
+    <span class="brand-name">Alignments</span>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-body fade-in">
+      <div class="section-eyebrow">About Us</div>
+      <h2 class="section-title">10+ Years<br>Serving Kyle, TX</h2>
+
+      <div class="walkin-badge">
+        <span>✓ &nbsp; Walk-Ins Welcome · No Appointment Needed</span>
+      </div>
+
+      <p>
+        J Reyes Complete Auto was founded on one simple idea: every driver deserves honest, dependable auto care without the dealership runaround. <strong>What started as a small local shop over a decade ago</strong> has grown into a full-service repair facility trusted by families all across Kyle and the surrounding area.
+      </p>
+      <p>
+        Our experienced technicians combine modern diagnostic tools with old-school integrity. We take the time to explain every repair clearly, charge fair prices, and treat every vehicle like it's our own. Whether it's a routine oil change or a complex engine repair, we do the job right — the first time.
+      </p>
+      <p>
+        We're also set up with all major insurance providers and can handle insurance claims from start to finish. Serving Kyle, Buda, San Marcos, and the greater Hays County area.
+      </p>
+
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years in Business</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">All</div>
+          <div class="stat-label">Makes &amp; Models</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">$7</div>
+          <div class="stat-label">State Inspections</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5★</div>
+          <div class="stat-label">Customer Rated</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-image-wrap fade-in">
+      <img src="assets/jreyes-about.jpg" alt="J Reyes Complete Auto shop in Kyle, TX" onerror="this.style.background='#181c22';this.style.minHeight='500px';this.removeAttribute('src')" />
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,#181c22,#0e1014);display:flex;align-items:center;justify-content:center;z-index:-1;">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="40" stroke="#2e3340" stroke-width="2"/>
+          <circle cx="50" cy="50" r="15" stroke="#c0392b" stroke-width="2"/>
+          <line x1="50" y1="10" x2="50" y2="35" stroke="#2e3340" stroke-width="3"/>
+          <line x1="50" y1="65" x2="50" y2="90" stroke="#2e3340" stroke-width="3"/>
+          <line x1="10" y1="50" x2="35" y2="50" stroke="#2e3340" stroke-width="3"/>
+          <line x1="65" y1="50" x2="90" y2="50" stroke="#2e3340" stroke-width="3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="metallic-strip"></div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header fade-in">
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title">Full-Service<br>Auto Repair</h2>
+    </div>
+
+    <div class="services-grid fade-in">
+      <div class="service-card">
+        <span class="service-icon">📋</span>
+        <div class="service-name">State Inspections</div>
+        <p class="service-desc">Quick, reliable Texas state inspections at just $7. Walk in anytime — no appointment needed. Fast turnaround so you can get back on the road.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <div class="service-name">Routine Maintenance</div>
+        <p class="service-desc">Oil changes, filter replacements, fluid services, and multi-point inspections to keep your vehicle running smoothly mile after mile.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛑</span>
+        <div class="service-name">Brakes &amp; Calipers</div>
+        <p class="service-desc">Our technicians specialize in brake systems. Pad replacements, rotor resurfacing, caliper service, and brake fluid flushes — safety first, always.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">❄️</span>
+        <div class="service-name">A/C Repair &amp; Service</div>
+        <p class="service-desc">Trained to detect leaks and diagnose any issue in your climate control system. Stay cool through the Texas summer with reliable A/C service.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔍</span>
+        <div class="service-name">Diagnostics</div>
+        <p class="service-desc">Check engine lights and warning codes diagnosed accurately with modern tools. No guesswork — we find the real problem and fix it right.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🚗</span>
+        <div class="service-name">Wheel Alignments</div>
+        <p class="service-desc">Precision wheel alignment to restore safe handling, reduce tire wear, and improve fuel efficiency. Quick service, long-lasting results.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔩</span>
+        <div class="service-name">Tire Repair &amp; Sales</div>
+        <p class="service-desc">Flat repairs, tire mounting, balancing, and new tire sales. Fast turnaround whether you're a walk-in or bringing in a set of new tires.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">⚙️</span>
+        <div class="service-name">Engine Repair</div>
+        <p class="service-desc">From minor tune-ups to major engine repairs, our experienced technicians handle it all on domestic and import vehicles of all makes and models.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛡️</span>
+        <div class="service-name">Insurance Claims</div>
+        <p class="service-desc">Set up with all major insurance providers. We handle the paperwork and work directly with your insurance company from start to finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why">
+    <div class="fade-in">
+      <div class="section-eyebrow">Why J Reyes</div>
+      <h2 class="section-title">Built on Honesty &amp;<br>10 Years of Trust</h2>
+    </div>
+
+    <div class="why-grid fade-in">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-title">Walk-Ins Welcome</div>
+        <p class="why-desc">No appointment needed. Pull in when it's convenient for you. We move quickly and respect your time — most routine services are done the same day.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-title">Honest &amp; Upfront</div>
+        <p class="why-desc">Customers consistently call us honest and fair. We explain every repair, give you a straight price, and never recommend work your vehicle doesn't need.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-title">All Makes &amp; Models</div>
+        <p class="why-desc">Domestic or import, car or truck — our technicians are trained and experienced across the full range of vehicles on the road today.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-title">Insurance Ready</div>
+        <p class="why-desc">Set up with all major insurers to handle claims from start to finish. We take the stress out of the process so you can focus on getting back on the road.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="metallic-strip"></div>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="reviews-inner fade-in">
+      <div class="section-eyebrow" style="justify-content:center;">Customer Reviews</div>
+      <div class="review-stars">★★★★★</div>
+      <blockquote class="review-quote">
+        "I had went to 5 different places and either they didn't do them anymore or the guy was out sick. I was told about Reyes Auto — so I looked them up and stopped by. The young lady was very nice, very thorough, and Professional. This was a diamond in the rough."
+      </blockquote>
+      <div class="review-author">Verified Customer</div>
+      <div class="review-meta">State Inspection · Kyle, TX</div>
+
+      <div class="reviews-count">
+        <div class="rc-line"></div>
+        <div class="rc-text">Highly Rated on Google · Kyle, TX</div>
+        <div class="rc-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="fade-in">
+      <div class="section-eyebrow">Shop Gallery</div>
+      <h2 class="section-title">See Our Work</h2>
+    </div>
+    <div class="gallery-note fade-in">
+      <p>📷 &nbsp; Photos coming soon. Drop images into the assets folder to populate this gallery.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-left fade-in">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2 class="section-title">Come See Us<br>in Kyle</h2>
+
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value"><a href="tel:5122565169">(512) 256-5169</a></div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:jreyescompleteauto@gmail.com">jreyescompleteauto@gmail.com</a></div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">Address</div>
+        <div class="contact-value">
+          281 Anton Dr.<br>
+          Kyle, TX 78640
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">Hours</div>
+        <div class="contact-value">
+          <div class="hours-grid">
+            <span class="hours-day">Mon – Fri</span>
+            <span class="hours-time">8:00 AM – 5:00 PM</span>
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">By Appointment</span>
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time closed">Closed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.0!2d-97.8900!3d29.9900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b3dd37e8e5465%3A0x58c703868649a538!2s281%20Anton%20Dr%2C%20Kyle%2C%20TX%2078640!5e0!3m2!1sen!2sus!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="J Reyes Complete Auto location map">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="contact-right fade-in">
+      <div class="section-eyebrow">Ready to Visit?</div>
+      <h2 class="section-title">Call or<br>Walk Right In</h2>
+
+      <div class="cta-block">
+        <div class="cta-block-title">Give Us a Call</div>
+        <p class="cta-block-desc">
+          Call during business hours and we'll walk you through your vehicle needs, give you an honest estimate, and get you in fast. Walk-ins always welcome.
+        </p>
+        <a href="tel:5122565169" class="btn-primary" style="font-size:1.1rem;padding:1.2rem 3rem;">(512) 256-5169</a>
+      </div>
+
+      <div style="margin-top:2.5rem;padding:2rem;border:1px solid var(--border-bright);">
+        <div class="section-eyebrow" style="margin-bottom:1rem;">Serving the Greater Kyle Area</div>
+        <p style="font-size:0.9rem;line-height:1.7;color:var(--silver);">
+          Kyle · Buda · San Marcos · Wimberley · Hays County · South Austin
+        </p>
+      </div>
+
+      <div style="margin-top:2rem;padding:2rem;background:var(--panel);border:1px solid var(--border-bright);">
+        <div class="section-eyebrow" style="margin-bottom:0.8rem;">We Service</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:0.5rem;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-bright);border:1px solid var(--border-bright);padding:0.4rem 0.9rem;">Domestic</span>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-bright);border:1px solid var(--border-bright);padding:0.4rem 0.9rem;">Import</span>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-bright);border:1px solid var(--border-bright);padding:0.4rem 0.9rem;">Cars</span>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-bright);border:1px solid var(--border-bright);padding:0.4rem 0.9rem;">Trucks</span>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-bright);border:1px solid var(--border-bright);padding:0.4rem 0.9rem;">SUVs</span>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-bright);border:1px solid var(--border-bright);padding:0.4rem 0.9rem;">Vans</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <div class="metallic-strip"></div>
+  <section id="quote" style="background: linear-gradient(160deg, rgba(18,20,28,0.80) 0%, rgba(12,14,20,0.80) 100%); border-top: 1px solid var(--border-bright);">
+    <div class="fade-in" style="max-width:900px;margin:0 auto;">
+      <div class="section-eyebrow" style="justify-content:center;">Request Service</div>
+      <h2 class="section-title" style="text-align:center;">Request<br>Service Online</h2>
+      <p style="text-align:center;color:var(--silver);font-size:1rem;line-height:1.8;max-width:580px;margin:0 auto 3.5rem;">
+        Fill out the form below and we'll get back to you within one business day. The more detail you provide, the faster we can help.
+      </p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="quote-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Full Name</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(xxx) xxx-xxxx" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="you@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="request_type">Type of Request</label>
+            <select class="form-input form-select" id="request_type" name="request_type" required>
+              <option value="" disabled selected>Select one...</option>
+              <option value="Request Service">Request Service</option>
+              <option value="Callback">Request a Callback</option>
+              <option value="Appointment">Schedule an Appointment</option>
+              <option value="State Inspection">State Inspection</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row form-row-3">
+          <div class="form-group">
+            <label class="form-label" for="year">Vehicle Year</label>
+            <input class="form-input" type="text" id="year" name="vehicle_year" placeholder="e.g. 2018" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="make">Make</label>
+            <input class="form-input" type="text" id="make" name="vehicle_make" placeholder="e.g. Ford, Toyota" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="model">Model</label>
+            <input class="form-input" type="text" id="model" name="vehicle_model" placeholder="e.g. F-150, Camry" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="mileage">Approximate Mileage</label>
+            <input class="form-input" type="text" id="mileage" name="mileage" placeholder="e.g. 65,000" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="service">Service Needed</label>
+            <select class="form-input form-select" id="service" name="service_needed">
+              <option value="" disabled selected>Select a service...</option>
+              <option>State Inspection</option>
+              <option>Oil Change / Routine Maintenance</option>
+              <option>Brakes &amp; Calipers</option>
+              <option>A/C Repair &amp; Service</option>
+              <option>Diagnostics / Check Engine Light</option>
+              <option>Wheel Alignment</option>
+              <option>Tire Repair or Replacement</option>
+              <option>Engine Repair</option>
+              <option>Insurance Claim / Body Repair</option>
+              <option>Not Sure / Need Diagnosis</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label class="form-label" for="description">Describe the Issue</label>
+          <textarea class="form-input form-textarea" id="description" name="issue_description" placeholder="Describe what you're experiencing — any sounds, warning lights, when it happens, how long it's been going on. The more you tell us, the better we can help." rows="6"></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display:none;" />
+        <div style="text-align:center;margin-top:2rem;">
+          <button type="submit" class="btn-primary" style="font-size:1rem;padding:1.2rem 4rem;border:none;cursor:pointer;">Send My Request</button>
+          <p style="margin-top:1.2rem;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);">We'll respond within one business day</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-metallic"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">J <span>REYES</span> COMPLETE AUTO</div>
+      <div class="footer-copy">© 2026 J Reyes Complete Auto · Kyle, TX · (512) 256-5169</div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
